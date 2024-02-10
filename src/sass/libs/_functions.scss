@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+/* пересчет из px в rem */
+
+@function rem($px) {
+  $base-font-size: 16px; //  The base font size in pixels (1rem)
+  @return #{calc($px / $base-font-size)}rem;
+}
+
+/* пересчет из px в vw */
+
+$max-breakpoint: 1366;
+$wide-screen: "(min-width: #{$max-breakpoint}px)";
+
+@function get-vw($target) { 
+	$vw-context: ($max-breakpoint*.01) * 1px;
+	@return ($target/$vw-context) * 1vw;
+}

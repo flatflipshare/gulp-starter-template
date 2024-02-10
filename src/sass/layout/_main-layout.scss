@@ -1,0 +1,24 @@
+.main-layout {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+	
+	&__content {
+		display: block;
+  	width: 100%;
+  	flex-grow: 1;
+	}
+
+	&__footer {
+		display: block;
+  	width: 100%;
+  	flex-grow: 0;
+	}
+}

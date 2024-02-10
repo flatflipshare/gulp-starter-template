@@ -1,0 +1,16 @@
+.wrapper {
+	display: block;
+	
+	width: 100%;
+	max-width: $content-width;
+
+	margin: 0 auto;
+	padding: 0 $content-padding;
+
+	@include media-query($breakpoint-sm) {
+		padding: 0 calc($content-padding * 0.8);
+	}
+	@include media-query($breakpoint-xs) {
+		padding: 0 calc($content-padding * 0.5);
+	}
+}

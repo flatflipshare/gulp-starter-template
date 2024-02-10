@@ -1,0 +1,32 @@
+@charset 'UTF-8';
+
+@import
+  'libs/ui-kit',
+  'libs/functions',
+  'libs/mixins';
+  
+.announcement-bar {
+	background: $ui-brand-color-2;
+	padding: 12px 0;
+
+	&__message {
+		color: #FFF;
+		font-size: 17px;
+		line-height: 1.2;
+		font-weight: 600;
+		margin: 0;
+	}
+
+	&__scrolling-items {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__scrolling-item {
+		white-space: nowrap;
+
+		span {
+			padding: 0 30px;
+		}
+	}
+}

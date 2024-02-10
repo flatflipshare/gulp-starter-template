@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  text-decoration: none;
+
+  @include on-event {
+    text-decoration: underline;
+  }
+}
+
+.is-section {
+	margin-top: rem(100px);
+
+	@include media-query($breakpoint-xs) {
+		margin-top: rem(50px);
+	}
+}
+
+.t-center {
+  text-align: center;
+}
+
+.is-link {
+	font-weight: 600;
+	color: $base-text-color;
+	text-decoration-line: underline;
+}

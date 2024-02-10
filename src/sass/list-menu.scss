@@ -1,0 +1,40 @@
+@charset 'UTF-8';
+
+@import
+  'libs/ui-kit',
+  'libs/functions',
+  'libs/mixins';
+
+.list-menu {
+	display: flex;
+	justify-content: center;
+
+	margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+
+	&__item {
+		position: relative;
+
+		margin: 0 20px;
+    padding: 0;
+    text-indent: 0;
+    list-style-type: none;
+	}
+
+	&__link {
+		display: block;
+		padding: 5px;
+		font-size: rem(17px);
+		line-height: 1.235;
+		font-weight: 600;
+		color: $base-text-color;
+
+		transition: color 0.2s ease-out;
+		@include on-event {
+	    text-decoration: none;
+	    color: $ui-brand-color-2;
+	  }
+	}
+}

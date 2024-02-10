@@ -1,0 +1,82 @@
+.is-button {
+	--bth-border-width: 1px;
+	--btn-border-color: #{$base-text-color};
+	position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  background: 0 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  touch-action: manipulation;
+  overflow: visible;
+  text-align: center;
+  cursor:pointer;
+  @include on-event {
+    text-decoration: none;
+  }
+
+  &__text {
+		font-family: var(--font-heading-family);
+		text-rendering: optimizeSpeed;
+		font-weight: 700;
+		font-size: rem(20px);
+		padding: 0 rem(10px);
+		display: inline-block;
+    position: relative;
+
+    @include media-query($breakpoint-xs) {
+    	font-size: rem(19px);
+    }
+  }
+}
+
+.is-button--primary {
+	--bth-height: 62px;
+	--btn-bg-color: #{$ui-brand-color-1};
+	--btn-bg-hover-color: #{$base-text-color};
+
+	min-width: 250px;
+	background: var(--btn-bg-color);
+	height: var(--bth-height);
+	border: var(--bth-border-width) solid var(--btn-border-color);
+	line-height: calc(var(--bth-height) - var(--bth-border-width) * 2);
+	border-radius: calc(var(--bth-height) / 2);
+
+	.is-button__text {
+		color: #fff;
+		text-transform: uppercase;
+	}
+	@include media-query($breakpoint-xs) {
+		min-width: 200px;
+		height: calc(var(--bth-height) - 12px);
+		line-height: calc((var(--bth-height) - 12px) - var(--bth-border-width) * 2);
+		border-radius: calc((var(--bth-height) - 12px) / 2);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) and #{$mouse-device} {
+	.is-button--primary {
+		box-shadow: none;
+		transition: background 0.2s ease-out, box-shadow 0.2s ease-out;
+	}
+	.is-button--primary:hover {
+		box-shadow: 0 0 0 0.2rem var(--btn-bg-hover-color);
+		background: var(--btn-bg-hover-color);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) and #{$touch-device} {
+	.is-button--primary {
+		will-change: transform;
+    transition: transform 0.05s ease-out, background 0.05s ease-out;
+	}
+	.is-button--primary:active {
+		transform: scale(0.95);
+    background: var(--btn-bg-hover-color);
+	}
+}

@@ -1,0 +1,74 @@
+/**
+ * Basic typography style for copy text
+ */
+
+ html {
+	font-size: var(--html-font-size);
+}
+
+ body {
+  color: $base-text-color;
+  font-family: var(--font-body-family);
+	font-size: var(--base-font-size);
+	background: var(--body-bg);
+  font-stretch: normal;
+  line-height: var(--base-font-line-height);
+  letter-spacing: normal;
+  font-style: normal;
+  font-weight: var(--font-body-weight);
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant-numeric: lining-nums;
+	-moz-font-feature-settings: 'lnum';
+	-webkit-font-feature-settings: 'lnum';
+	font-feature-settings: 'lnum' on;
+}
+
+.heading {
+	font-family: var(--font-heading-family);
+	font-weight: var(--font-heading-weight);
+	line-height: 1.2;
+	// text-rendering: optimizeSpeed;
+}
+
+.section-heading {
+	margin: 0;
+	text-align: center;
+	font-size: rem(50px);
+	color: $base-text-color;
+	
+	@include media-query($breakpoint-lg) {
+		font-size: rem(40px);
+	}
+	@include media-query($breakpoint-xs) {
+		font-size: rem(31px);
+	}
+}
+
+.paragraph {
+	margin: 0;
+}
+
+.h1 {
+	margin: 0;
+	font-weight: 800;
+	font-size: rem(55px);
+	line-height: 1.1;
+	@include media-query($breakpoint-xs) {
+		font-size: rem(31px);
+		line-height: 1.25;
+	}
+}
+
+.h2 {
+	margin: 0;
+	font-size: rem(46px);
+	line-height: 140%;
+
+	@include media-query($breakpoint-lg) {
+		font-size: rem(35px);
+	}
+	@include media-query($breakpoint-xs) {
+		font-size: rem(25px);
+	}
+}

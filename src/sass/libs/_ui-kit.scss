@@ -1,0 +1,37 @@
+$ui-index-1: 1;
+$ui-index-2: 2;
+$ui-index-3: 3;
+$ui-index-4: 4;
+$ui-index-5: 5;
+$ui-index-6: 6;
+$ui-index-7: 7;
+$ui-index-8: 8;
+
+// Theme colors:
+
+$ui-brand-color-1: #FF4C01; // Orange
+$ui-brand-color-1-dark: #EB3F0E; // Orange Dark
+$ui-brand-color-2: #00A89A; // Sea
+$ui-brand-color-3: #ECE4DB; // Almond
+$ui-theme-error-color: #C26D6D; // Error Red
+
+// Text colors:
+
+$base-text-color: #202020; // Charcoal
+
+// Layout settings:
+
+$content-width: 1440px;
+$content-padding: 40px;
+
+// Breakpoints settings (desktop-first):
+
+$breakpoint-xl: 1280px;
+$breakpoint-lg: 1200px;
+$breakpoint-md: 992px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 575px;
+$breakpoint-xxs: 350px;
+
+$mouse-device: '(hover: hover) and (pointer: fine )';
+$touch-device: '(hover: none) and (pointer: coarse)';
